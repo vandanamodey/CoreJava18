@@ -17,6 +17,14 @@ public class Company {
 		Employee emp3 = new Employee(003, "Jackson", "ACCOUNTS");
 		System.out.println("Employee #3  ID : " + emp3.getId() + " Dept : "
 				+ emp3.getDepartment());
+		
+		Employee empMethodDemo = new Employee(101,"Kelly","SALES");
+		empMethodDemo.printEmployeeInfo();
+		empMethodDemo.printEmployeeInfo("8/10/2012");
+		
+		
+		
+		
 
 	}
 

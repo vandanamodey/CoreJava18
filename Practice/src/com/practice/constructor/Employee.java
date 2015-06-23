@@ -15,17 +15,19 @@ public class Employee {
 
 	}
 
+	// 2 arguments
 	public Employee(int id, String nameLocal) {
 		this.id = id;
 		this.name = nameLocal;
 
 	}
 
-	// 2 arguments
+	// 3 arguments
 	public Employee(int id, String nameLocal, String department) {
-		this.id = id;
+		this(id, nameLocal);
+		// this.id = id;
 		this.department = department;
-		this.name = nameLocal;
+		// this.name = nameLocal;
 	}
 
 	public String getName() {
@@ -52,4 +54,24 @@ public class Employee {
 		this.department = department;
 	}
 
+	public void printEmployeeInfo() {
+		System.out.println("\nDemonstrating method");
+		System.out.println(name + " " + department);
+
+	}
+
+	public void printEmployeeInfo(String joinDate) {
+		System.out.println("\nDemonstrating method overloading below : ");
+		System.out.println(name + " " + department + " " + joinDate);
+		System.out.println(getEmpInfo()  + " " + joinDate);
+
+	}
+	
+	private String getEmpInfo(){
+		System.out.println("In getEmpInfo() ");
+
+		return name + "  " + department;
+
+	}
+	
 }
